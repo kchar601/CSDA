@@ -1,0 +1,253 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1701313530856,
+        "children": [
+          {
+            "key": 1701313770462,
+            "children": [],
+            "todo": {
+              "content": "nav-bar",
+              "id": 1701313770462,
+              "level": "default",
+              "done": false,
+              "start": 1701313770462
+            }
+          },
+          {
+            "key": 1701313554182,
+            "children": [],
+            "todo": {
+              "content": "Hero Section",
+              "id": 1701313554182,
+              "level": "default",
+              "done": false,
+              "start": 1701313554182
+            }
+          },
+          {
+            "key": 1701313674352,
+            "children": [],
+            "todo": {
+              "content": "Services section",
+              "id": 1701313674352,
+              "level": "default",
+              "done": false,
+              "start": 1701313674352
+            }
+          },
+          {
+            "key": 1701313684739,
+            "children": [],
+            "todo": {
+              "content": "Testimonials",
+              "id": 1701313684739,
+              "level": "default",
+              "done": false,
+              "start": 1701313684739
+            }
+          },
+          {
+            "key": 1701313739176,
+            "children": [],
+            "todo": {
+              "content": "CTA Contact",
+              "id": 1701313739176,
+              "level": "default",
+              "done": false,
+              "start": 1701313739176
+            }
+          },
+          {
+            "key": 1701313751901,
+            "children": [],
+            "todo": {
+              "content": "FAQ",
+              "id": 1701313751901,
+              "level": "default",
+              "done": false,
+              "start": 1701313751901
+            }
+          },
+          {
+            "key": 1701313766906,
+            "children": [],
+            "todo": {
+              "content": "footer",
+              "id": 1701313766906,
+              "level": "default",
+              "done": false,
+              "start": 1701313766906
+            }
+          }
+        ],
+        "todo": {
+          "content": "Create landing page",
+          "id": 1701313530856,
+          "level": "warning",
+          "done": false,
+          "start": 1701313530856
+        }
+      },
+      {
+        "key": 1701313547414,
+        "children": [
+          {
+            "key": 1701313756676,
+            "children": [],
+            "todo": {
+              "content": "Meet the team",
+              "id": 1701313756676,
+              "level": "default",
+              "done": false,
+              "start": 1701313756676
+            }
+          },
+          {
+            "key": 1701313904052,
+            "children": [],
+            "todo": {
+              "content": "Mission Statement",
+              "id": 1701313904052,
+              "level": "default",
+              "done": false,
+              "start": 1701313904052
+            }
+          }
+        ],
+        "todo": {
+          "content": "About Us",
+          "id": 1701313547414,
+          "level": "warning",
+          "done": false,
+          "start": 1701313547414
+        }
+      },
+      {
+        "key": 1701313825638,
+        "children": [
+          {
+            "key": 1701314204004,
+            "children": [],
+            "todo": {
+              "content": "UI/UX Design to engage users",
+              "id": 1701314204004,
+              "level": "default",
+              "done": false,
+              "start": 1701314204004
+            }
+          },
+          {
+            "key": 1701314233459,
+            "children": [],
+            "todo": {
+              "content": "Database integration and functionality",
+              "id": 1701314233459,
+              "level": "default",
+              "done": false,
+              "start": 1701314233459
+            }
+          },
+          {
+            "key": 1701314259300,
+            "children": [],
+            "todo": {
+              "content": "Dynamic pages with easily customizable data, coding free",
+              "id": 1701314259300,
+              "level": "default",
+              "done": false,
+              "start": 1701314259300
+            }
+          }
+        ],
+        "todo": {
+          "content": "Services",
+          "id": 1701313825638,
+          "level": "warning",
+          "done": false,
+          "start": 1701313825638
+        }
+      },
+      {
+        "key": 1701313834421,
+        "children": [
+          {
+            "key": 1701314126247,
+            "children": [],
+            "todo": {
+              "content": "Create reusable card component with a picture, title and some description. Should wrap text and hide overflow - scale larger on hover, and have a link to the working site",
+              "id": 1701314126247,
+              "level": "default",
+              "done": false,
+              "start": 1701314126247
+            }
+          }
+        ],
+        "todo": {
+          "content": "Portfolio",
+          "id": 1701313834421,
+          "level": "warning",
+          "done": false,
+          "start": 1701313834421
+        }
+      },
+      {
+        "key": 1701313841024,
+        "children": [
+          {
+            "key": 1701313987381,
+            "children": [
+              {
+                "key": 1701314030506,
+                "children": [],
+                "todo": {
+                  "content": "Sends the emails to keithcsda@gmail.com & csdamanagement@gmail.com",
+                  "id": 1701314030506,
+                  "level": "secondary",
+                  "done": false,
+                  "start": 1701314030506
+                }
+              }
+            ],
+            "todo": {
+              "content": "Contact form -> using SMTP",
+              "id": 1701313987381,
+              "level": "default",
+              "done": false,
+              "start": 1701313987381
+            }
+          }
+        ],
+        "todo": {
+          "content": "Contact",
+          "id": 1701313841024,
+          "level": "warning",
+          "done": false,
+          "start": 1701313841024
+        }
+      }
+    ],
+    "expandKeys": [
+      1701313530856,
+      1701313547414,
+      1701313841024,
+      1701313987381,
+      1701313834421,
+      1701313825638,
+      1701314204004
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": false,
+    "playFontSize": 24,
+    "title": ".todo",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1701314285134"
+  }
+}
