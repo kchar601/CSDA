@@ -12,6 +12,7 @@ body {
   font-weight: 400;
   background-color: var(--background);
   color: var(--text);
+  margin: 80px 0 0 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -37,7 +38,7 @@ small {font-size: 0.750rem; /* 12px */}
 :root{
   --text: #d9eaf7;
   --background: #050e15;
-  --primary: #86bae4;
+  --primary: rgb(134, 186, 228);
   --secondary: #182A39;
   --accent: #2d85cd;
 
@@ -119,3 +120,49 @@ small {font-size: 0.750rem; /* 12px */}
   user-select: none;
   }
 
+nav-bar{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  height: 50%;
+}
+
+.carousel-slide {
+  display: none; /* Hide all slides by default */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-slide > div {
+  margin-top: 10%;
+}
+
+.carousel-slide.active {
+  display: block; /* Show the active slide */
+  opacity: 1;
+}
+
+.carousel-control {
+  position: absolute;
+  color: var(--text);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+}
+
+.prev {
+  left: -50px;
+}
+
+.next {
+  right: -50px;
+}

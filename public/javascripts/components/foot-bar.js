@@ -23,8 +23,8 @@ footBar.innerHTML = /*html*/`
     }
 
     footer {
-        display: flex;
-        flex-direction: row;
+        margin: 32px 0px;
+        display: grid;
         padding: 0px 64px;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -53,9 +53,21 @@ footBar.innerHTML = /*html*/`
 
     .hero {
         display: flex;
+        flex-direction: column;
         height: fit-content;
         align-items: center;
         padding: 8px 16px;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero h3{
+        text-align: center;
+        margin: 0;
     }
 
     .runOff{
@@ -64,6 +76,7 @@ footBar.innerHTML = /*html*/`
     }
 
     ul {
+        display: flex;
         list-style-type: none;
         padding: 0;
         gap: 8px;
@@ -101,7 +114,7 @@ footBar.innerHTML = /*html*/`
     }
 
     button:hover, button:active, button:focus{
-        background-color: var(--primary);
+        background-color: var(--secondary);
         cursor: pointer;
     }
 
@@ -113,9 +126,13 @@ footBar.innerHTML = /*html*/`
     }
 
     a:hover, a:active, a:focus {
-        background-color: var(--primary);
+        background-color: var(--secondary);
         font-weight: bold;
-        color: var(--background);
+    }
+
+    .logo:hover {
+        background-color: transparent;
+        font-weight: normal;
     }
 
     .special {
@@ -137,17 +154,47 @@ footBar.innerHTML = /*html*/`
         display: flex;
         width: 100%;
         border-top: 1px solid var(--primary);
-        font-size: var(--small-font);
+        font-size: 0.750rem;
         margin: 0px;
         padding: 32px 0px 0px 0px;
         justify-content: center;
+    }
+
+    @media only screen and (max-width: 1190px) {
+        footer{
+            padding: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 1060px) {
+        ul{
+            flex-direction: column;
+        }
+        footer div{
+            justify-content: start;
+        }
+    }
+
+    @media only screen and (min-width: 769px) {
+        footer{
+            grid-template-columns: .6fr 1fr .6fr;
+        }
     }
 
     @media only screen and (max-width: 768px) {
         footer{
             margin: auto;
             padding: 0px;
+            grid-template-rows: auto auto auto;
         }
+
+        footer > div {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .special{
             width: fit-content;
         }
@@ -156,6 +203,11 @@ footBar.innerHTML = /*html*/`
         }
         .hero{
             align-self: center;
+            flex-direction: row;
+        }
+
+        .hero h3{
+            margin: 0px;
         }
     }
 
@@ -176,49 +228,30 @@ footBar.innerHTML = /*html*/`
         padding-right: 64px;
     }
 </style>
-<div class="hero">
-    <a href='/index.html' class="logo"><img src="../../images/logo no background.png"></a>
-    <h2 class="prevent-select">Charlton & Slivinski Digital Architects</h2>
-</div>
 <footer>
+    <div class="hero">
+        <a href='/index.html' class="logo"><img src="../../images/logo no background.png"></a>
+        <h3 class="prevent-select">Charlton & Slivinski <br>Digital Architects</h3>
+    </div>
     <div>
         <h3 class="prevent-select">Site Directory</h3>
         <ul>
             <a href="/index.html"><li>Home</li></a>
-            <a href="/meetings.html"><li>Meetings</li></a>
-            <a href="/contact.html"><li>Contact</li></a>
-            <a href="/about.html"><li>About</li></a>
-            <a href="/faq.html"><li>FAQ</li></a>
+            <a href="/about.html"><li>About Us</li></a>
+            <a href="/services.html"><li>Services</li></a>
+            <a href="/portfolio.html"><li>Portfolio</li></a>
+            <a href="/contact.html"><li>Contact Us</li></a>
         </ul>
     </div>
     <div>
-        <h3 class="prevent-select">Admin<span class="p-1"></span></h3>
+        <h3 class="prevent-select">Looking for a estimate?</h3>
         <ul>
-            <a href="/login.html"><li>Login</li></a>
-            <a href="/dashboard.html"><li>Dashboard</li></a>
-        </ul>
-    </div>
-    <div>
-        <h3 class="prevent-select">Other Recovery Links</h3>
-        <ul>
-            <a href="https://www.youtube.com/c/AlcoholicsAnonymousWorldServicesInc"><li class="runOff">Alcoholics Anonymous World Services YouTube Channel</li></a>
-            <a href="http://www.aa.org/"><li>Alcoholics Anymous Website</li></a>
-        </ul>
-    </div>
-    <div>
-        <h3 class="prevent-select">Want to stay up to date?</h3>
-        <h4 class="prevent-select">Consider subscribing to our mailing list<h4>
-        <ul>          
-            <li>
-                <label for="email" class="hide">Email address:</label>
-                <input type="text" id="emailList" placeholder="Enter email address">
-                <button type="submit" onclick="return addEmail()">Subscribe</button>
-            </li>
+            <a href="/estimate.html"><li>Fill out our form!</li></a>
         </ul>
     </div>
 </footer>
 <div class="hero">
-    <p class="prevent-select small-text">© The Warrenton Meeting Place 2023</p>
+    <p class="prevent-select small-text">© Charlton and Slivinski Digital Architects 2023</p>
 </div>
 `;
 
