@@ -11,8 +11,10 @@
               "content": "nav-bar",
               "id": 1701313770462,
               "level": "default",
-              "done": false,
-              "start": 1701313770462
+              "done": true,
+              "start": 1701313770462,
+              "focus": false,
+              "end": 1701833576617
             }
           },
           {
@@ -22,8 +24,10 @@
               "content": "Hero Section",
               "id": 1701313554182,
               "level": "default",
-              "done": false,
-              "start": 1701313554182
+              "done": true,
+              "start": 1701313554182,
+              "focus": false,
+              "end": 1701833577166
             }
           },
           {
@@ -33,8 +37,10 @@
               "content": "Services section",
               "id": 1701313674352,
               "level": "default",
-              "done": false,
-              "start": 1701313674352
+              "done": true,
+              "start": 1701313674352,
+              "focus": false,
+              "end": 1701833578391
             }
           },
           {
@@ -44,8 +50,10 @@
               "content": "Testimonials",
               "id": 1701313684739,
               "level": "default",
-              "done": false,
-              "start": 1701313684739
+              "done": true,
+              "start": 1701313684739,
+              "focus": false,
+              "end": 1701833578879
             }
           },
           {
@@ -55,8 +63,10 @@
               "content": "CTA Contact",
               "id": 1701313739176,
               "level": "default",
-              "done": false,
-              "start": 1701313739176
+              "done": true,
+              "start": 1701313739176,
+              "focus": false,
+              "end": 1701833579464
             }
           },
           {
@@ -66,8 +76,10 @@
               "content": "FAQ",
               "id": 1701313751901,
               "level": "default",
-              "done": false,
-              "start": 1701313751901
+              "done": true,
+              "start": 1701313751901,
+              "focus": false,
+              "end": 1701833580257
             }
           },
           {
@@ -77,8 +89,10 @@
               "content": "footer",
               "id": 1701313766906,
               "level": "default",
-              "done": false,
-              "start": 1701313766906
+              "done": true,
+              "start": 1701313766906,
+              "focus": false,
+              "end": 1701833580760
             }
           }
         ],
@@ -86,8 +100,10 @@
           "content": "Create landing page",
           "id": 1701313530856,
           "level": "warning",
-          "done": false,
-          "start": 1701313530856
+          "done": true,
+          "start": 1701313530856,
+          "focus": false,
+          "end": 1701833575664
         }
       },
       {
@@ -100,8 +116,10 @@
               "content": "Meet the team",
               "id": 1701313756676,
               "level": "default",
-              "done": false,
-              "start": 1701313756676
+              "done": true,
+              "start": 1701313756676,
+              "focus": false,
+              "end": 1701833567868
             }
           },
           {
@@ -111,8 +129,21 @@
               "content": "Mission Statement",
               "id": 1701313904052,
               "level": "default",
+              "done": true,
+              "start": 1701313904052,
+              "focus": false,
+              "end": 1701833568705
+            }
+          },
+          {
+            "key": 1701833560839,
+            "children": [],
+            "todo": {
+              "content": "<div>        <h3>Shaping the Digital Future: Our Aspirations for Small Business Empowerment</h3>        <p>As digital architects, we foresee a future where small businesses harness the power of the digital world as second nature. Charlton & Slivinski is at the helm of this evolution, managing the complexities of digital presence so you can concentrate on the heart of your business.</p>    </div>    <div>        <h3>Beyond Websites: Comprehensive Digital Strategies for Dynamic Business Growth</h3>        <p>Choosing Charlton & Slivinski means opting for a partner who is as invested in your success as you are. We bring not only a suite of custom-designed digital tools but also a commitment to fostering an online presence that drives traffic and builds a loyal customer base. With us, your digital journey is in hands that care for your growth and are equipped to make it happen.</p>    </div>",
+              "id": 1701833560839,
+              "level": "default",
               "done": false,
-              "start": 1701313904052
+              "start": 1701833560839
             }
           }
         ],
@@ -120,8 +151,10 @@
           "content": "About Us",
           "id": 1701313547414,
           "level": "warning",
-          "done": false,
-          "start": 1701313547414
+          "done": true,
+          "start": 1701313547414,
+          "focus": false,
+          "end": 1701833584604
         }
       },
       {
@@ -248,6 +281,6 @@
     "showEndTime": false,
     "simpleMode": false,
     "lang": "en",
-    "version": "1701314285134"
+    "version": "1701833584784"
   }
 }

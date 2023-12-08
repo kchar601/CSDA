@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Caudex:700|RocknRoll One:400');
 
+html{
+  scroll-behavior: smooth;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -41,6 +45,8 @@ small {font-size: 0.750rem; /* 12px */}
   --primary: rgb(134, 186, 228);
   --secondary: #182A39;
   --accent: #2d85cd;
+
+  --temp: #080f15;
 
   --header-font: 'Caudex';
   --body-font: 'RocknRoll One';

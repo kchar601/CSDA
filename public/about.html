@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sl-theme-dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About CSDA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/dark.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="javascripts/load-animation.js"></script>
     <script defer src="javascripts/components/nav-bar.js"></script>
@@ -11,9 +13,186 @@
 </head>
 <nav-bar></nav-bar>
 <body>
-    
-    
+    <sl-carousel class="vertical" pagination orientation="vertical" mouse-dragging>
+        <sl-carousel-item>
+            <div>
+                <h3>Growing Together: Our Commitment to Your Digital Success</h3>
+                <p>Charlton & Slivinski Digital Architects is committed to fostering your business's growth and evolving alongside you. We understand the transformative power of a professional digital presence and are dedicated to making it accessible and impactful for your enterprise.</p>
+            </div>
+        </sl-carousel-item>
+        <sl-carousel-item>
+            <div>
+                <h3>Digital Craftsmanship: Our Journey to Empower Your Online Presence</h3>
+                <p>Inspired by the growth of small businesses in the digital age, we, at Charlton & Slivinski Digital Architects, embarked on a journey to turn our passion for full-stack website creation into a vehicle for innovation and empowerment. Our mission is to collaborate closely with you, applying meticulous attention to detail and blending professionalism with a touch of casualness to craft meaningful digital experiences.</p>
+            </div>
+        </sl-carousel-item>
+        <sl-carousel-item>
+            <div>
+                <h3>Customized Digital Solutions: Full-Stack Web Services to Elevate Your Business</h3>
+                <p>We offer a spectrum of full-stack web solutions, from bespoke website design to robust database administration. Our services extend to web hosting and search engine optimization, though we are continuously enhancing our expertise in SEO. What distinguishes us is not just our hand-coded sites but our holistic web systems, meticulously crafted to empower your business's operations and online presence.</p>
+            </div>
+        </sl-carousel-item>
+        <sl-carousel-item>
+            <div>
+                <h3>Innovation at Every Step: Our Cutting-Edge Approach to Web Design and Development</h3>
+                <p>At Charlton & Slivinski, staying abreast of the latest in digital trends and technologies is part of our daily routine. We immerse ourselves in the digital sphere with an unquenchable thirst for knowledge, constantly evolving through new insights from industry thought leaders and hands-on experience.</p>
+            </div>
+        </sl-carousel-item>
+      </sl-carousel>
+      <style>
+        .vertical {
+          height: 88vh;
+        }
+      
+        .vertical::part(base) {
+          grid-template-areas: 'slides slides pagination';
+        }
+      
+        .vertical::part(pagination) {
+          display: none;
+          flex-direction: column;
+        }
+      
+        .vertical::part(navigation) {
+          transform: rotate(90deg);
+          display: flex;
+        }
 
+        sl-carousel-item div h3{
+            width: 70%;
+            text-wrap: wrap;
+            margin: auto;
+            text-align: center;
+        }
+        
+        sl-carousel-item div{
+            padding: 16px;
+            position: relative;
+            width: 50%;
+            left: -20%;
+            margin: auto;
+            text-align: center;
+            background: rgb(24,42,57);
+        }
+        .newBackground{
+            background: rgb(5,14,21);
+            background: linear-gradient(180deg, rgba(5,14,21,1) 0%, rgba(24,42,57,1) 100%);
+        }
+        .card-image {
+              max-width: 300px;
+        }
+      </style>
+      <script>
+        document.querySelectorAll('sl-carousel-item').forEach((item, index) => {
+            div = item.querySelector('div');
+            div.setAttribute('index', index);
+            switch(index){
+                case 0:
+                    div.style.left = '-20%';
+                    div.style.background = 'radial-gradient(circle, rgba(24,42,57,1) 0%, rgba(5,14,21,1) 100%)';
+                    div.style.boxShadow = '0px 0px 10px 10px rgba(24,42,57,1)';
+                    break;
+                case 1:
+                    div.style.left = '-10%';
+                    div.style.background = 'radial-gradient(circle, rgba(24,42,57,1) 25%, rgba(5,14,21,1) 100%)';
+                    div.style.boxShadow = '0px 0px 20px 20px rgba(24,42,57,1)';
+                    break;
+                case 2:
+                    div.style.left = '0%';
+                    div.style.background = 'radial-gradient(circle, rgba(24,42,57,1) 50%, rgba(5,14,21,1) 100%)';
+                    div.style.boxShadow = '0px 0px 30px 30px rgba(24,42,57,1)';
+                    break;
+                case 3:
+                    div.style.left = '10%';
+                    div.style.background = 'radial-gradient(circle, rgba(24,42,57,1) 75%, rgba(5,14,21,1) 100%)';
+                    div.style.boxShadow = '0px 0px 40px 40px rgba(24,42,57,1)';
+                    break;
+            }
+        });
+        </script>
+
+<div class="newBackground">
+    <div class="card-container">
+        <h3>Meet the Architects</h3>
+        <div class="row">
+        <span><sl-card class="card-image">
+            <img
+              slot="image"
+              src="./images/keith.jpg"
+              alt="A professional headshot of Keith Charlton."
+            />
+            <div slot="header">
+                Keith Charlton
+            </div>
+            Keith Charlton is a tech enthusiast with a drive for innovation in enterprise technology. His technical sharpness is evident through his creation of various web-based projects, demonstrated by his work for The Warrenton Meeting Place, where he has successfully merged user-centric design with robust functionality to create welcoming and informative digital environments that serve community needs.
+          </sl-card>
+        </span>
+        <span>
+          <sl-card class="card-image">
+            <img
+              slot="image"
+              src="./images/chad.jpg"
+              alt="A professional headshot of Chad Slivinski."
+            />
+            <div slot="header">
+                Chad Slivinski
+            </div>
+            Chad Slivinski merges keen business insight with digital marketing acumen, setting the stage for transformative online growth strategies. Chad is carving out a niche in Business and Digital Marketing informed by hands-on experiences. Chad brings his multifaceted expertise to the forefront, driving the development of digital solutions that resonate with and elevate the client experience.
+          </sl-card>
+        </span>
+        </div>
+        <style>
+            .card-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .card-image{
+                max-width: 400px;
+                background-color: var(--background);
+            }
+            .row{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .row span{
+                margin: auto;
+            }
+            .card-image img{
+                width: 70%;
+                margin: 12px auto;
+                border-radius: 10%;
+            }
+            .card-image div{
+                text-align: center;
+            }
+            .card-container sl-card::part(header) {
+                font-family: 'Caudex';
+                font-size: 1.777rem;
+                font-weight: bold;
+            }
+            .card-container sl-card::part(base) {
+                background-color: var(--background);
+                border: none;
+            }
+            .card-image div::part(body){
+                font-size: 1.2rem;
+            }
+
+            sl-card:hover{
+                box-shadow: 0px 0px 10px 10px rgba(24,42,57,1);
+            }
+
+            .newBackground{
+                padding-bottom: 32px;
+            }
+        </style>
+    </div>
+</div>
 </body>
 <foot-bar></foot-bar>
 </html>
