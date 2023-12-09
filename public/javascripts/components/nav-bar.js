@@ -5,7 +5,7 @@ navBar.innerHTML = /*html*/`
     display: flex;
     background-color: var(--background);
     color: var(--text);
-    font-size: var(--h5-font);
+    font-size: 1.333rem;
     border-bottom: 2px solid var(--primary);
     width: 100%;
     box-sizing: border-box; /* Add this line */
