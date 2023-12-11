@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSDA's Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/dark.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="javascripts/load-animation.js"></script>
     <script defer src="javascripts/components/nav-bar.js"></script>
@@ -11,9 +13,81 @@
 </head>
 <nav-bar></nav-bar>
 <body>
-    
-    
+    <div class="hero">
+        <h2>Crafting Digital Excellence</h2>
+        <h4>Discover our tailored web solutions to enhance your digital footprint.</h4>
+        <a class="CTA">Get a free Estimate
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-dark" height="1em" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+        </a>
+    </div>
+    <div class="card-container">
+        <h3><span>Our Services</span></h3>
+        <sl-card class="card">
+            <img
+              slot="image"
+              src=""
+              alt="A professional headshot of Keith Charlton."
+            />
+            <div slot="header">
+                Keith Charlton
+            </div>
+            Keith Charlton is a tech enthusiast with a drive for innovation in enterprise technology. His technical sharpness is evident through his creation of various web-based projects, demonstrated by his work for The Warrenton Meeting Place, where he has successfully merged user-centric design with robust functionality to create welcoming and informative digital environments that serve community needs.
+          </sl-card>
+        <span class="card"></span>
+    </div>
 
 </body>
 <foot-bar></foot-bar>
 </html>
+<style>
+    .hero{
+        padding: 64px 5%;
+        background-image: linear-gradient(to right top, #050e15, #0b141c, #0f1922, #111e29, #142330, #172c3e, #1a354c, #1d3f5b, #205076, #246192, #2873af, #2d85cd);
+    }
+    .hero h2{
+        margin: 0;
+    }
+    .hero h4{
+        margin-top: 0;
+        text-wrap: wrap;
+    }
+    .svg-dark{
+        fill: var(--background);
+    }
+    .CTA{
+        background-color:var(--accent);
+        border: none;
+        color: var(--background);
+        font-size: var(--h5-font);
+        font-family: 'gabarito', sans-serif;
+        cursor: pointer;
+        font-family: var(--body-font);
+        padding: 16px;
+        border-radius: 8px;
+        font-size: 1.333rem;
+    }
+    .CTA:hover, .CTA:active, .CTA:focus{
+        background-color: var(--primary);
+        animation: moving 5s infinite;
+        -webkit-animation: moving .5s ease-in-out infinite alternate;
+    }
+    .card-container{
+        margin: 32px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    h3 {
+        width: 30%; 
+        text-align: center; 
+        border-bottom: 1px solid var(--text); 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
+    } 
+
+    h3 span { 
+        background: var(--background);
+        padding:0 10px; 
+    }
+</style>

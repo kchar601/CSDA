@@ -92,7 +92,7 @@ navBar.innerHTML = /*html*/`
 
     .CTA{
         background-color:var(--accent);
-        border: none;
+        border: 1px solid var(--background);
         color: var(--background);
         font-size: var(--h5-font);
         font-family: 'gabarito', sans-serif;
