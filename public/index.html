@@ -129,7 +129,21 @@
                 element.style.textDecoration = 'underline';
             });
         });
+        hoverEnlarge.addEventListener('focus', () => {
+            document.querySelectorAll('.large-text').forEach((element) => {
+                // Use the transform property to set the scale
+                element.style.transform = 'scale(1.5)';
+                element.style.textDecoration = 'underline';
+            });
+        });
         hoverEnlarge.addEventListener('mouseleave', () => {
+            document.querySelectorAll('.large-text').forEach((element) => {
+                // Reset the transform property to none
+                element.style.transform = 'none';
+                element.style.textDecoration = 'none';
+            });
+        });
+        hoverEnlarge.addEventListener('blur', () => {
             document.querySelectorAll('.large-text').forEach((element) => {
                 // Reset the transform property to none
                 element.style.transform = 'none';
@@ -354,7 +368,7 @@ h5{
     border: 1px solid var(--background);
 }
 
-.highlight-animation:hover{
+.highlight-animation:hover, .highlight-animation:focus, .highlight-animation:active{
     background-color: var(--background);
     border: 1px solid var(--primary);
     box-shadow: 0 0 8px 16px rgb(134, 186, 228, .2);
