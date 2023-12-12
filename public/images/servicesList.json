@@ -2,32 +2,32 @@
     "services": [
       {
         "name": "SEO & Market Reach",
-        "src": "./images/SEO.png",
+        "src": "./images/SEO.webp",
         "description": "Boost your visibility and engage your audience with our expert SEO and targeted email marketing strategies."
       },
       {
         "name": "Web Design",
-        "src": "./images/webdesign.png",
+        "src": "./images/webdesign.webp",
         "description": "Crafting static and dynamic websites that create lasting impressions and engage users with interactive content."
       },
       {
         "name": "API & Database Integration",
-        "src": "./images/Database.png",
+        "src": "./images/Database.webp",
         "description": "Connect services and power your infrastructure with seamless API integrations and robust database management."
       },
       {
         "name": "User Experience",
-        "src": "./images/UX.png",
+        "src": "./images/UX.webp",
         "description": "Secure login functionality paired with custom admin dashboards for optimal website control and user management."
       },
       {
         "name": "Responsive & UI/UX Design",
-        "src": "./images/responsive.png",
+        "src": "./images/responsive.webp",
         "description": "Designing responsive websites with intuitive user interfaces for an outstanding multi-device experience."
       },
       {
         "name": "Ecommerce & Dynamic Solutions",
-        "src": "./images/ecommerce.jpg",
+        "src": "./images/ecommerce.webp",
         "description": "Launch and grow your online business with our comprehensive ecommerce solutions and dynamic web functionalities."
       }
     ]
