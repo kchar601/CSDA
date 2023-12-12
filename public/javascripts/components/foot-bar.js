@@ -230,7 +230,7 @@ footBar.innerHTML = /*html*/`
 </style>
 <footer>
     <div class="hero">
-        <a href='/index.html' class="logo"><img src="../../images/logo no background.png"></a>
+        <a href='/index.html' class="logo"><img src="../../images/logo no background.webp"></a>
         <h3 class="prevent-select">Charlton & Slivinski <br>Digital Architects</h3>
     </div>
     <div>
