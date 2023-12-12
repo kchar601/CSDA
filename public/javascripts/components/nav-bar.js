@@ -147,7 +147,6 @@ navBar.innerHTML = /*html*/`
         :host {
             display: grid;
             grid-template-columns: 1.8fr .2fr;
-            height: fit-content;
             padding: 0px;
             margin-left: 0px;
         }
