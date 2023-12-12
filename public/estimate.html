@@ -25,13 +25,13 @@
         <div class="form">
             <sl-input type="text" id="nameInput" placeholder="Your Name"></sl-input>
             <sl-input type="email" id="emailInput" placeholder="Your Email"></sl-input>
-            <sl-select label="What service are you looking for?">
-                <sl-option value="option-1">SEO & Market Reach</sl-option>
-                <sl-option value="option-2">Web Design</sl-option>
-                <sl-option value="option-3">API & Database Integration</sl-option>
-                <sl-option value="option-4">User Experience</sl-option>
-                <sl-option value="option-5">Responsive & UI/UX Design</sl-option>
-                <sl-option value="option-6">Ecommerce & Dynamic Solutions</sl-option>
+            <sl-select id="topicInput" label="What service are you looking for?">
+                <sl-option value="SEO & Market Reach">SEO & Market Reach</sl-option>
+                <sl-option value="Web Design">Web Design</sl-option>
+                <sl-option value="API & Database Integration">API & Database Integration</sl-option>
+                <sl-option value="User Experience">User Experience</sl-option>
+                <sl-option value="Responsive & UI/UX Design">Responsive & UI/UX Design</sl-option>
+                <sl-option value="Ecommerce & Dynamic Solutions">Ecommerce & Dynamic Solutions</sl-option>
               </sl-select>
             <label>Not sure what your looking for? Start a conversation with us below:</label>
             <sl-textarea type="text" id="msgInput" placeholder="Your Message" resize="auto"></sl-textarea>
@@ -132,8 +132,9 @@
     showLoader();
     const name = document.querySelector('#nameInput').value;
     const email = document.querySelector('#emailInput').value;
+    const topic = document.querySelector('#topicInput').value;
     const msg = document.querySelector('#msgInput').value;
-    console.log(name, email, msg);
+    console.log(name, email, topic, msg);
     if(name == ""){
         hideLoader();
         alert("Please enter a valid name"); 
@@ -149,7 +150,7 @@
         alert("Please enter a valid message"); 
         return false;
     }
-    const data = {name: name, email: email, msg: msg};
+    const data = {name: name, email: email, topic:topic, msg: msg};
     return sendMsg(data);
 }
 
@@ -168,6 +169,7 @@ async function sendMsg(data){
         alert("Message sent successfully");
         document.querySelector('#nameInput').value = '';
         document.querySelector('#emailInput').value = '';
+        document.querySelector('#topicInput').value = '';
         document.querySelector('#msgInput').value = '';
     }
     else{
