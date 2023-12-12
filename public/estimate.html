@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSDA Estimates</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/dark.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="javascripts/load-animation.js"></script>
     <script defer src="javascripts/components/nav-bar.js"></script>
@@ -11,9 +13,166 @@
 </head>
 <nav-bar></nav-bar>
 <body>
-    
+    <div class="hero">
+        <h1>Free Estimate</h1>
+    </div>
+    <div class="content-wrapper border-thick">
+        <h4>Start Your Digital Journey</h4>
+        <div class="extra">
+        <span>Ready to transform your online presence? Get a personalized estimate tailored to your specific digital needs.</span>
+        </div>
+        <i class="loader --6"></i>
+        <div class="form">
+            <sl-input type="text" id="nameInput" placeholder="Your Name"></sl-input>
+            <sl-input type="email" id="emailInput" placeholder="Your Email"></sl-input>
+            <sl-select label="What service are you looking for?">
+                <sl-option value="option-1">SEO & Market Reach</sl-option>
+                <sl-option value="option-2">Web Design</sl-option>
+                <sl-option value="option-3">API & Database Integration</sl-option>
+                <sl-option value="option-4">User Experience</sl-option>
+                <sl-option value="option-5">Responsive & UI/UX Design</sl-option>
+                <sl-option value="option-6">Ecommerce & Dynamic Solutions</sl-option>
+              </sl-select>
+            <label>Not sure what your looking for? Start a conversation with us below:</label>
+            <sl-textarea type="text" id="msgInput" placeholder="Your Message" resize="auto"></sl-textarea>
+            <button onclick="return checkMsg()">Send</button>
+        </div>
+    </div>
     
 
 </body>
 <foot-bar></foot-bar>
 </html>
+
+<style>
+    .hero{
+        font-size: 3.158rem;
+        text-align: center;
+        margin: auto;
+        padding: 16px 0 0 0;
+    }
+    .content-wrapper{
+        margin: auto;
+        max-width: 80%;
+        text-align: center;
+    }
+    .extra{
+        max-width: 70%;
+        margin: 16px auto;
+    }
+    h4{
+        margin: 12px 0;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto auto 32px auto;
+    }
+    .form *:not(sl-option){
+        margin: 16px 0;
+    }
+    .form button{
+        margin: 16px auto;
+        width: fit-content;
+        padding: 16px;
+        border-radius: 8px;
+        border: none;
+        background-color: var(--accent);
+        color: var(--background);
+        font-weight: bold;
+        font-size: 1.333rem;
+    }
+    .form button:hover{
+        background-color: var(--primary);
+    }
+    sl-input::part(form-control), sl-textarea::part(form-control), sl-select::part(form-control-input){
+        border-radius: 8px;
+        border: 1px solid var(--primary);
+        z-index: 1;
+    }
+    sl-textarea::part(form-control) {
+        position: relative;
+        z-index: 0;
+    }
+    sl-input::part(form-control-input), sl-textarea::part(form-control-input), sl-select::part(form-control-input){
+        padding: 6px;
+        z-index: 1;
+    }
+    sl-select::part(listbox) {
+        background: var(--background);
+        z-index: 1000;
+    }
+    @media (max-width: 800px){
+        .form{
+            width: 90%;
+        }
+    }
+    sl-select {
+        position: relative;
+        z-index: 2;
+    }
+    sl-option{
+        margin:0;
+        padding: 8px;
+    }
+    sl-option:not(:last-child){
+        border-bottom: 1px solid var(--primary);
+    }
+    sl-option:hover, sl-option:active, sl-option:focus{
+        background-color: var(--secondary);
+    }
+
+
+
+</style>
+
+<script>
+    function checkMsg(){
+    showLoader();
+    const name = document.querySelector('#nameInput').value;
+    const email = document.querySelector('#emailInput').value;
+    const msg = document.querySelector('#msgInput').value;
+    console.log(name, email, msg);
+    if(name == ""){
+        hideLoader();
+        alert("Please enter a valid name"); 
+        return false;
+    };
+    if(email == "" || !email.includes("@")){
+        hideLoader();
+        alert("Please enter a valid email"); 
+        return false;
+    }
+    if(msg == ""){
+        hideLoader();
+        alert("Please enter a valid message"); 
+        return false;
+    }
+    const data = {name: name, email: email, msg: msg};
+    return sendMsg(data);
+}
+
+async function sendMsg(data){
+    const response = await fetch('/api/sendMsg', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    console.log(result);
+    if(result.status == "success"){
+        hideLoader();
+        alert("Message sent successfully");
+        document.querySelector('#nameInput').value = '';
+        document.querySelector('#emailInput').value = '';
+        document.querySelector('#msgInput').value = '';
+    }
+    else{
+        hideLoader();
+        alert("Message failed to send");
+    }
+}
+</script>

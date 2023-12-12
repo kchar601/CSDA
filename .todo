@@ -167,8 +167,10 @@
               "content": "UI/UX Design to engage users",
               "id": 1701314204004,
               "level": "default",
-              "done": false,
-              "start": 1701314204004
+              "done": true,
+              "start": 1701314204004,
+              "focus": false,
+              "end": 1702331707488
             }
           },
           {
@@ -178,8 +180,10 @@
               "content": "Database integration and functionality",
               "id": 1701314233459,
               "level": "default",
-              "done": false,
-              "start": 1701314233459
+              "done": true,
+              "start": 1701314233459,
+              "focus": false,
+              "end": 1702331706537
             }
           },
           {
@@ -189,8 +193,10 @@
               "content": "Dynamic pages with easily customizable data, coding free",
               "id": 1701314259300,
               "level": "default",
-              "done": false,
-              "start": 1701314259300
+              "done": true,
+              "start": 1701314259300,
+              "focus": false,
+              "end": 1702331704674
             }
           }
         ],
@@ -198,8 +204,10 @@
           "content": "Services",
           "id": 1701313825638,
           "level": "warning",
-          "done": false,
-          "start": 1701313825638
+          "done": true,
+          "start": 1701313825638,
+          "focus": false,
+          "end": 1702331708007
         }
       },
       {
@@ -238,8 +246,10 @@
                   "content": "Sends the emails to keithcsda@gmail.com & csdamanagement@gmail.com",
                   "id": 1701314030506,
                   "level": "secondary",
-                  "done": false,
-                  "start": 1701314030506
+                  "done": true,
+                  "start": 1701314030506,
+                  "focus": false,
+                  "end": 1702331714357
                 }
               }
             ],
@@ -247,8 +257,10 @@
               "content": "Contact form -> using SMTP",
               "id": 1701313987381,
               "level": "default",
-              "done": false,
-              "start": 1701313987381
+              "done": true,
+              "start": 1701313987381,
+              "focus": false,
+              "end": 1702331713359
             }
           }
         ],
@@ -256,8 +268,10 @@
           "content": "Contact",
           "id": 1701313841024,
           "level": "warning",
-          "done": false,
-          "start": 1701313841024
+          "done": true,
+          "start": 1701313841024,
+          "focus": false,
+          "end": 1702331715056
         }
       }
     ],
@@ -281,6 +295,6 @@
     "showEndTime": false,
     "simpleMode": false,
     "lang": "en",
-    "version": "1701833584784"
+    "version": "1702331715278"
   }
 }

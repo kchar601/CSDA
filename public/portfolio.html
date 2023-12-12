@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSDA'S Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="javascripts/load-animation.js"></script>
     <script defer src="javascripts/components/nav-bar.js"></script>
@@ -11,9 +11,165 @@
 </head>
 <nav-bar></nav-bar>
 <body>
-    
-    
-
+    <div class="hero">
+        <h1>Our Digital Masterpieces</h1>
+        <h3>Explore our curated collection of projects, showcasing our innovative approach and commitment to crafting exceptional digital experiences.</h3>
+    </div>
+    <div>
+        <div class="project">
+            <div class="project-image">
+                <img src="./images/twmp.png" alt="project-image">
+            </div>
+            <div class="project-info">
+                <h2>The Warrenton Meeting Place</h2>
+                <p>The Warrenton Meeting Place (TWMP) website redesign transformed the digital face of a community-centric 12-Step recovery organization. The project delivered a modern, user-friendly website optimized for accessibility and responsiveness. It features an updatable meeting schedule, faq and announcement bar, a streamlined contact form, and integration for donations. This website not only enhances TWMP's online presence but also expands its reach and facilitates its mission of supporting individuals on their journey to recovery.</p>
+            </div>
+        </div>
+    </div>
 </body>
 <foot-bar></foot-bar>
 </html>
+<style>
+    h1{
+        text-align: left;
+        margin: 0 5%;
+        padding: 5% 20px;
+        border-radius: 10px;
+    }
+    h3{
+        margin: 0 5%;
+        padding: 0 20px 5% 20px;
+        border-radius: 10px;
+        width: 80%;
+    }
+    .project{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        margin: 64px auto;
+    }
+    .project-image{
+        display: flex;
+        justify-content: center;
+    }
+    .project-image img{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        border-radius: 24px;
+    }
+    .project-info{
+        width: 90%;
+    }
+    .fade-in {
+        animation: fadeIn ease 7s infinite;
+        -webkit-animation: fadeIn ease 7s infinite;
+        -moz-animation: fadeIn ease 7s infinite;
+        -o-animation: fadeIn ease 7s infinite;
+        -ms-animation: fadeIn ease 7s infinite;
+    }
+    .fade-out {
+        animation: fadeOut ease 7s infinite;
+        -webkit-animation: fadeOut ease 7s infinite;
+        -moz-animation: fadeOut ease 7s infinite;
+        -o-animation: fadeOut ease 7s infinite;
+        -ms-animation: fadeOut ease 7s infinite;
+    }
+
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-o-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+
+    @keyframes fadeOut {
+        0% {opacity:1;}
+        100% {opacity:0;}
+    }
+
+    @-moz-keyframes fadeOut {
+        0% {opacity:1;}
+        100% {opacity:0;}
+    }
+
+    @-webkit-keyframes fadeOut {
+        0% {opacity:1;}
+        100% {opacity:0;}
+    }
+
+    @-o-keyframes fadeOut {
+        0% {opacity:1;}
+        100% {opacity:0;}
+    }
+
+    @media (max-width:950px){
+        .hero{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        h1{
+            word-wrap: break-word;
+            text-wrap: wrap;
+            margin: 0;
+        }
+        .project{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+</style>
+<script>
+    class TextAnimator {
+    constructor(selector, options) {
+        this.text = document.querySelector(selector);
+        this.strText = this.text.textContent.trim();
+        this.splitText = this.strText.split("");
+        this.text.textContent = "";
+        this.options = options || {};
+        this.margin = this.options.margin || '0px';
+        this.delay = this.options.delay || 0;
+        this.class = this.options.class || 'text-span';
+    }
+
+    animate() {
+        for (let i = 0; i < this.splitText.length; i++) {
+            if (this.splitText[i] === " ") {
+                this.text.innerHTML += "&nbsp;";
+            } else {
+                this.text.innerHTML += "<span class='"+ this.class + "' style='margin-right:" + this.margin + ";animation-delay:" + (i * this.delay) + "ms;'><span class='fade-in' style='animation-delay:" + (i * this.delay) + "ms;'>" + this.splitText[i] + "</span></span>";
+            }
+        }
+    }
+    
+}
+
+const animator = new TextAnimator('h1', {
+    margin: '5px',
+    delay: 100,
+    class: "text-blob__letter"
+});
+animator.animate();
+</script>

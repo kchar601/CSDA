@@ -20,20 +20,31 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="svg-dark" height="1em" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
         </a>
     </div>
+    <h3><span>Our Services</span></h3>
     <div class="card-container">
-        <h3><span>Our Services</span></h3>
-        <sl-card class="card">
-            <img
-              slot="image"
-              src=""
-              alt="A professional headshot of Keith Charlton."
-            />
-            <div slot="header">
-                Keith Charlton
-            </div>
-            Keith Charlton is a tech enthusiast with a drive for innovation in enterprise technology. His technical sharpness is evident through his creation of various web-based projects, demonstrated by his work for The Warrenton Meeting Place, where he has successfully merged user-centric design with robust functionality to create welcoming and informative digital environments that serve community needs.
-          </sl-card>
-        <span class="card"></span>
+        <script>
+            window.onload = () => {
+                const servicesList = './images/servicesList.json'
+                fetch(servicesList).then(response => response.json()).then(data => {
+                    console.log(data);
+                    data.services.forEach(service => {
+                        const card = document.createElement('sl-card');
+                        card.setAttribute('class', 'card-image');
+                        const image = document.createElement('img');
+                        image.setAttribute('src', service.src);
+                        image.setAttribute('alt', service.alt);
+                        image.setAttribute('slot', 'image');
+                        const header = document.createElement('div');
+                        header.setAttribute('slot', 'header');
+                        header.innerHTML = service.name;
+                        card.innerHTML = service.description;
+                        card.appendChild(image);
+                        card.appendChild(header);
+                        document.querySelector('.card-container').appendChild(card);
+                    })
+                })
+            }
+        </script>
     </div>
 
 </body>
@@ -72,22 +83,52 @@
         -webkit-animation: moving .5s ease-in-out infinite alternate;
     }
     .card-container{
+        width: 90%;
         margin: 32px auto;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
         justify-content: center;
         align-items: center;
+    }
+    .card-image img{
+        width: auto;
+        max-height: 200px;
+    }
+    .card-container sl-card::part(body) {
+        font-family: 'RocknRoll One';
+        font-weight: 400;
+        font-size: 100%;
+        margin: 8px;
     }
     h3 {
         width: 30%; 
         text-align: center; 
         border-bottom: 1px solid var(--text); 
         line-height: 0.1em;
-        margin: 10px 0 20px; 
+        margin: 32px auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     } 
 
     h3 span { 
         background: var(--background);
         padding:0 10px; 
+    }
+
+    @media (max-width: 970px){
+        .card-container{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 600px){
+        .card-container{
+            grid-template-columns: 1fr;
+        }
+        h3{
+            width: 100%;
+        }
     }
 </style>

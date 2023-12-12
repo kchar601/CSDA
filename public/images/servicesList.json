@@ -1,0 +1,35 @@
+{
+    "services": [
+      {
+        "name": "SEO & Market Reach",
+        "src": "./images/SEO.png",
+        "description": "Boost your visibility and engage your audience with our expert SEO and targeted email marketing strategies."
+      },
+      {
+        "name": "Web Design",
+        "src": "./images/webdesign.png",
+        "description": "Crafting static and dynamic websites that create lasting impressions and engage users with interactive content."
+      },
+      {
+        "name": "API & Database Integration",
+        "src": "./images/Database.png",
+        "description": "Connect services and power your infrastructure with seamless API integrations and robust database management."
+      },
+      {
+        "name": "User Experience",
+        "src": "./images/UX.png",
+        "description": "Secure login functionality paired with custom admin dashboards for optimal website control and user management."
+      },
+      {
+        "name": "Responsive & UI/UX Design",
+        "src": "./images/responsive.png",
+        "description": "Designing responsive websites with intuitive user interfaces for an outstanding multi-device experience."
+      },
+      {
+        "name": "Ecommerce & Dynamic Solutions",
+        "src": "./images/ecommerce.jpg",
+        "description": "Launch and grow your online business with our comprehensive ecommerce solutions and dynamic web functionalities."
+      }
+    ]
+  }
+  
