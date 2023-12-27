@@ -195,7 +195,7 @@ navBar.innerHTML = /*html*/`
     }
 </style>
 <nav>
-    <a href='/index.html' class="logo"><img src="../../images/logo no background.png"></a>
+    <a href='/' class="logo"><img src="../../images/logo no background.png"></a>
     <span class="title">
         <span class="largeText">C</span><span class="smallText">harlton</span><span class="largeText"> & S</span><span class="smallText">livinski</span><span class="largeText"> D</span><span class="smallText">igital</span><span class="largeText"> A</span><span class="smallText">rchitects</span>
     </span>

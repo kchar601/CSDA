@@ -236,7 +236,7 @@ footBar.innerHTML = /*html*/`
     <div>
         <h3 class="prevent-select">Site Directory</h3>
         <ul>
-            <a href="/index.html"><li>Home</li></a>
+            <a href="/"><li>Home</li></a>
             <a href="/about.html"><li>About Us</li></a>
             <a href="/services.html"><li>Services</li></a>
             <a href="/portfolio.html"><li>Portfolio</li></a>

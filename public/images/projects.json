@@ -1,0 +1,37 @@
+{
+    "projects": [
+      {
+        "id": 0,
+        "title": "The Warrenton Meeting Place",
+        "before": [
+            {
+                "src": "./images/TWMP/TWMP_Old_Landing.png",
+                "alt": "The Warrenton Meeting Place Old Landing Page"
+            },
+            {
+                "src": "./images/TWMP/TWMP_Old_Welcome.png",
+                "alt": "The Warrenton Meeting Place Old Welcome Page"
+            },
+            {
+                "src": "./images/TWMP/TWMP_Old_Meetings.png",
+                "alt": "The Warrenton Meeting Place Old Meetings Page"
+            }
+        ],
+        "after": [
+            {
+                "src": "./images/TWMP/TWMP_New_Landing.png",
+                "alt": "The Warrenton Meeting Place New Landing Page"
+            },
+            {
+                "src": "./images/TWMP/TWMP_New_Welcome.png",
+                "alt": "The Warrenton Meeting Place New Welcome Page"
+            },
+            {
+                "src": "./images/TWMP/TWMP_New_Meetings.png",
+                "alt": "The Warrenton Meeting Place New Meetings Page"
+            }
+        ],
+        "description": "The Warrenton Meeting Place (TWMP) website redesign transformed the digital face of a community-centric 12-Step recovery organization. The project delivered a modern, user-friendly website optimized for accessibility and responsiveness. It features an updatable meeting schedule, FAQ and announcement bar, a streamlined contact form, and integration for donations. This website not only enhances TWMP's online presence but also expands its reach and facilitates its mission of supporting individuals on their journey to recovery."
+      }
+    ]
+  }
